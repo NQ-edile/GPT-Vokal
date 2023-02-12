@@ -16,6 +16,8 @@ recognition.addEventListener("result", (event) => {
                 .map(result => result.transcript)
                 .join('');
 
+    console.log("Lindo said: ", transcript);
+
     if (transcript.toLowerCase().includes('max')) {
         query = transcript.replace(/Max/g, '');
         recognition.stop();
